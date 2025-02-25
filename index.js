@@ -1,11 +1,13 @@
-const express = require('express');
+const express = require("express");
+const app = express();
 
-const app = express;
+// Use the port provided by Cloud Run
+const PORT = process.env.PORT || 3000;
 
-app.length('/',(req, res) => {
-    res.send("You're App is Up and Running!")
-})
+app.get("/", (req, res) => {
+    res.send("Hello from Cloud Run!");
+});
 
-app.listen(3000, () => {
-    console.log("App is listening to port 3000 ")
-})
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});

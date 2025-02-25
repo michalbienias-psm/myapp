@@ -20,5 +20,8 @@
     "url": "https://github.com/michalbienias-psm/myapp/issues"
   },
   "homepage": "https://github.com/michalbienias-psm/myapp#readme",
-  "description": ""
+  "description": "",
+  "engines":{
+    "node": "18.x"
+  }
 }
